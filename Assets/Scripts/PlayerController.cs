@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
   
     private void Update() 
     { 
+        //Movimiento
         horizontalInput = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
@@ -37,15 +38,13 @@ public class PlayerController : MonoBehaviour
         // Limite por la izquierda
         if (pos.x < -xRange) 
         {
-            Debug.Log("Hola");
-            transform.position = new Vector3(-xRange, pos.y, pos.z);
+          transform.position = new Vector3(-xRange, pos.y, pos.z);
         }
 
         // Limite por la derecha
         if (pos.x > xRange)
         {
-            Debug.Log("Hola");
-            transform.position = new Vector3(xRange, pos.y, pos.z);
+          transform.position = new Vector3(xRange, pos.y, pos.z);
         }
     }
 
