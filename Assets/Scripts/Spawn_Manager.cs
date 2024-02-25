@@ -25,7 +25,7 @@ public class Spawn_Manager : MonoBehaviour
         animalIndex = Random.Range(0, animalPrefabsArray.Length);
         Instantiate(animalPrefabsArray[animalIndex]);
            RandomSpawnPos();
-           Quaternion.Euler(0, 180, 0));
+           Quaternion.Euler(0, 180, 0);
     }
 
    private Vector3 RandomSpawnPos() 
